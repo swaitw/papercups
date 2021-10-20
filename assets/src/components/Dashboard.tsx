@@ -72,6 +72,7 @@ import BillingOverview from './billing/BillingOverview';
 import CustomersPage from './customers/CustomersPage';
 import CustomerDetailsPage from './customers/CustomerDetailsPage';
 import CustomerDetailsPageV2 from './customers/CustomerDetailsPageV2';
+import CustomersSpreadsheet from './customers/CustomersSpreadsheet';
 import SessionsOverview from './sessions/SessionsOverview';
 import InstallingStorytime from './sessions/InstallingStorytime';
 import LiveSessionViewer from './sessions/LiveSessionViewer';
@@ -603,6 +604,7 @@ const Dashboard = (props: RouteComponentProps) => {
             path="/message-templates"
             component={MessageTemplatesOverview}
           />
+          <Route path="/beta/customers" component={CustomersSpreadsheet} />
           <Route path="/conversations*" component={InboxesDashboard} />
           <Route path="/inboxes*" component={InboxesDashboard} />
           <Route path="*" render={() => <Redirect to="/conversations/all" />} />
